@@ -1,0 +1,77 @@
+#######################################
+# Syntax Coloring Map For SamsungNASA_AVR
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SamsungNASA	KEYWORD1
+NASAPacket	KEYWORD1
+NASAAddress	KEYWORD1
+NASACommand	KEYWORD1
+NASAMessageSet	KEYWORD1
+PacketHandler	KEYWORD1
+BUS_TYPE	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+end	KEYWORD2
+poll	KEYWORD2
+available	KEYWORD2
+getPacket	KEYWORD2
+sendPacket	KEYWORD2
+setPacketHandler	KEYWORD2
+createPacket	KEYWORD2
+getDeviceAddress	KEYWORD2
+decode	KEYWORD2
+encode	KEYWORD2
+getSourceAddress	KEYWORD2
+getDestinationAddress	KEYWORD2
+getCommand	KEYWORD2
+addMessage	KEYWORD2
+getMessageCount	KEYWORD2
+getMessage	KEYWORD2
+clearMessages	KEYWORD2
+hasMessage	KEYWORD2
+getMessageValue	KEYWORD2
+getClass	KEYWORD2
+getChannel	KEYWORD2
+getAddress	KEYWORD2
+setClass	KEYWORD2
+setChannel	KEYWORD2
+setAddress	KEYWORD2
+getPacketInformation	KEYWORD2
+getProtocolVersion	KEYWORD2
+getRetryCount	KEYWORD2
+getPacketType	KEYWORD2
+getDataType	KEYWORD2
+getPacketNumber	KEYWORD2
+setPacketInformation	KEYWORD2
+setProtocolVersion	KEYWORD2
+setRetryCount	KEYWORD2
+setPacketType	KEYWORD2
+setDataType	KEYWORD2
+setPacketNumber	KEYWORD2
+getMessageNumber	KEYWORD2
+getType	KEYWORD2
+getValue	KEYWORD2
+setMessageNumber	KEYWORD2
+setValue	KEYWORD2
+getSize	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+F1_F2	LITERAL1
+R1_R2	LITERAL1
+
+NASA_START_BYTE	LITERAL1
+NASA_END_BYTE	LITERAL1
+NASA_MIN_PACKET_SIZE	LITERAL1
+NASA_MAX_PACKET_SIZE	LITERAL1
+NASA_MAX_MESSAGES	LITERAL1
