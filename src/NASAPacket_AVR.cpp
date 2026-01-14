@@ -89,12 +89,12 @@ size_t NASAPacket::encode(uint8_t* buffer, size_t maxLength) {
     size_t cursor = 3; // Skip start byte and size for now
     
     // Encode source address
-    _sourceAddress. encode(buffer, cursor);
+    _sourceAddress.encode(buffer, cursor);
     cursor += NASAAddress::SIZE;
     
     // Encode destination address
     _destinationAddress.encode(buffer, cursor);
-    cursor += NASAAddress:: SIZE;
+    cursor += NASAAddress::SIZE;
     
     // Encode command
     _command.encode(buffer, cursor);

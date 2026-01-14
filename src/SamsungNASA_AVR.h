@@ -10,9 +10,9 @@
 
 typedef void (*PacketHandler)(const NASAPacket& packet);
 
-enum BUS_TYPE :  uint8_t {
-    F1_F2 = 0,  // 8N1
-    R1_R2 = 1   // 8E1
+enum BUS_TYPE : uint32_t {
+    F1_F2 = SERIAL_8N1,
+    R1_R2 = SERIAL_8E1
 };
 
 class SamsungNASA {
