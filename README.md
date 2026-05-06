@@ -23,14 +23,14 @@ An Arduino library for communicating with Samsung HVAC systems using the NASA pr
 ```
 RS485 Module          Arduino
 ─────────────────────────────
-RO (Receiver Out) →   RX
-DI (Driver In)    →   TX
-RE (Recv Enable)  →   Pin 4 (or any digital pin)
-DE (Driver Enable)→   Pin 4 (same as RE)
-VCC               →   5V (or 3.3V)
-GND               →   GND
+RO (Receiver Out) ->  RX
+DI (Driver In)    ->  TX
+RE (Recv Enable)  ->  Pin 4 (or any digital pin)
+DE (Driver Enable)->  Pin 4 (same as RE)
+VCC               ->  5V (or 3.3V)
+GND               ->  GND
 
-RS485 A/B         →   Samsung F1/F2 or R1/R2
+RS485 A/B         ->  Samsung F1/F2, F3/F4, R1/R2
 ```
 
 ## Protocol Details
@@ -44,11 +44,6 @@ RS485 A/B         →   Samsung F1/F2 or R1/R2
 └────────┴──────┴──────┴────────┴──────────┴─────────┴──────────┴────────┴─────┴────────┘
 ```
 
-### Bus Types
-
-- **F1_F2**: 8N1 (8 data bits, No parity, 1 stop bit) - Most common
-- **R1_R2**: 8E1 (8 data bits, Even parity, 1 stop bit)
-
 ### Message Types
 
 - **Enum** (Type 0): 1-byte value (e.g., ON/OFF, mode)
@@ -60,8 +55,25 @@ RS485 A/B         →   Samsung F1/F2 or R1/R2
 
 Temperatures are encoded as `value * 10`:
 
-- 24.0°C → 240
-- 18.5°C → 185
+- 24.0°C -> 240
+- 18.5°C -> 185
+- 30.0°C -> 300
+
+## Troubleshooting
+
+### No packets received
+
+1. Check wiring (especially A/B polarity)
+2. Verify baud rate (usually 9600)
+3. Ensure RS485 module is powered correctly
+4. Check RE/DE pin is connected and configured
+
+### CRC errors
+
+1. Check for electrical noise on RS485 bus
+2. Ensure proper grounding
+3. Use twisted pair cable for longer runs
+4. Add termination resistors if needed (120Ω)
 
 ## License
 
