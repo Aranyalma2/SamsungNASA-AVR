@@ -21,7 +21,6 @@ SamsungNASA nasa;
 // Configuration
 const uint32_t BAUD_RATE = 9600;
 const int8_t RE_DE_PIN = 2;
-const BUS_TYPE BUS = F1_F2;
 
 // Device address configuration
 const uint8_t MY_CLASS = AddressClass::Indoor;
@@ -30,7 +29,7 @@ const uint8_t MY_ADDRESS = 1;
 
 void setup() {
   // Initialize NASA protocol
-  if (!nasa.begin(BAUD_RATE, RE_DE_PIN, BUS, MY_CLASS, MY_CHANNEL, MY_ADDRESS)) {
+  if (!nasa.begin(BAUD_RATE, RE_DE_PIN, MY_CLASS, MY_CHANNEL, MY_ADDRESS)) {
     debugSerial.println(F("Failed to initialize NASA! "));
     // Failed to initialize - halt with fast blink
     pinMode(LED_BUILTIN, OUTPUT);

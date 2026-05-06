@@ -24,7 +24,6 @@ SamsungNASA nasa;
 // Configuration
 const uint32_t BAUD_RATE = 9600;
 const int8_t RE_DE_PIN = 2;
-const BUS_TYPE BUS = F1_F2;  // F1_F2 for 8N1, R1_R2 for 8E1
 
 // Device address configuration
 const uint8_t MY_CLASS = AddressClass::Undefined;
@@ -42,7 +41,7 @@ const unsigned long SEND_INTERVAL = 5000; // Send every 5 seconds
 
 void setup() {
   // Initialize NASA protocol
-  if (!nasa.begin(BAUD_RATE, RE_DE_PIN, BUS, MY_CLASS, MY_CHANNEL, MY_ADDRESS)) {
+  if (!nasa.begin(BAUD_RATE, RE_DE_PIN, MY_CLASS, MY_CHANNEL, MY_ADDRESS)) {
     // Failed to initialize - halt
     pinMode(LED_BUILTIN, OUTPUT);
     while (1) {

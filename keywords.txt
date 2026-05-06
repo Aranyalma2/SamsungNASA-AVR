@@ -12,7 +12,6 @@ NASAAddress	KEYWORD1
 NASACommand	KEYWORD1
 NASAMessageSet	KEYWORD1
 PacketHandler	KEYWORD1
-BUS_TYPE	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -66,9 +65,6 @@ getSize	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
-
-F1_F2	LITERAL1
-R1_R2	LITERAL1
 
 NASA_START_BYTE	LITERAL1
 NASA_END_BYTE	LITERAL1
